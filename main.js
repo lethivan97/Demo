@@ -1,5 +1,42 @@
+var SlideMoodule=(function(){
+	var slideIndex = 1;
 
-var slideIndex = 1;
+	var showDivs=function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("item1");
+		  if (n > x.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+		     x[i].className=x[i].className.replace(" active","");  
+		  }
+		  x[slideIndex-1].className += " active"; 
+		}
+	return {
+		show:function show(n) {
+  		showDivs(slideIndex+=n);
+	}		
+	}
+})();
+var SlideModule=(function(){
+	var slideIndex = 1;
+
+	var showDivs=function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("item2");
+		  if (n > x.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+		     x[i].className=x[i].className.replace(" active","");  
+		  }
+		  x[slideIndex-1].className += " active"; 
+		}
+	return {
+		show:function show(n) {
+  		showDivs(slideIndex+=n);
+	}		
+	}
+})();
+/*var slideIndex = 1;
 showDivs(slideIndex);
 function show(n) {
   showDivs(slideIndex += n);
@@ -15,7 +52,7 @@ function showDivs(n) {
   }
   x[slideIndex-1].className += " active"; 
 
-}
+}*/
 /*var currentSlide=0;
 function previous(){
 	var x=document.getElementsByName('item');
@@ -68,4 +105,12 @@ function Mouse4(){
 }
 function Out4(){
 	document.getElementById('f4').src='images/icon.png';
+}
+function myFunction() {
+    var x = document.getElementById("menu");
+    if (x.className === "navbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar";
+    }
 }

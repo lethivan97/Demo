@@ -9,25 +9,18 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	<style type="text/css">
-  		@media screen and (max-width: 600px) {  
-  			#page,#heaader,#body,#sileshow,#menu_footer {
-  				width: 100%;
-  			}
-}
-  	</style>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body style="background-color:#B5B0B0">
-	<div class="container">
+<body>
 		<div id="page">
 		<div id="header">
 				<div class="row">
-					<div class="col-md-6 col-sm-6 col-xs-6 log">
-						<div id="logo">
+					<div class="col-md-6 col-sm-3 col-xs-3 log">
+						<div id="logo" >
 							<img src="images/logo.png" alt="Logo">
 						</div>
 					</div>
-					<div class="col-md-6 col-sm-6 col-xs-6">
+					<div class="col-md-6 col-sm-9 col-xs-9">
 						<div id="hotline">
 							<img src="images/concat.png" alt="Hot Line">
 						</div>
@@ -52,13 +45,15 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div id="menu">
+				
+		</div>
+	<div class="row">
+					<div id="menu" class="navbar">
 						<ul>
 							<li id="first" class="menu_hover">
 								<img src="images/home.png" alt="">
 							</li>
-							<li class="menu_hover margin" style="margin-left: -5px">
+							<li class="menu_hover margin second" >
 								<a href="#">Hàng online</a>
 							</li>							
 							<li class="margin">
@@ -80,6 +75,7 @@
 							<li class="margin">
 								<a href="#">Đặt hàng</a>
 							</li>
+
 							<li id="form">
 								<form class="form-inline">
 									<input type="text" name="search" placeholder="tìm kiếm" class="form-control">
@@ -87,23 +83,24 @@
 								</form>
 								
 							</li>
+							 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+							    <i class="fa fa-bars"></i>
+							</a>
 						</ul>
 					</div>
 					
 				</div>
-		</div>
-	
 		<div id="body">
 			<div class="row">
-				<div class="col-md-8 col-sm-8 col-xs-8 left" id="myCarousel" class="carousel slide" data-ride="carousel">
+				<div class="col-md-8 col-sm-12 col-xs-12 left" id="myCarousel" class="carousel slide" data-ride="carousel">
 					<div id="anh"  class="carousel-inner">
-						<div class="item active">
+						<div class="item active item1">
 							<img id="main-image" src="images/imgshow.png" alt="" >
 						</div>
-						<div class="item">
+						<div class="item item1">
 							<img src="images/img_1r.png" alt="">
 						</div>
-						<div class="item">
+						<div class="item item1">
 							<img src="images/img2.jpg" alt="">
 						</div>
 					</div>
@@ -113,25 +110,26 @@
 						<img src="images/slideshow.png" alt="">
 					</div>
 					<div id="shuffer">
-							<img  src="images/slide_shuffer.png" onclick="show(-1)">
+							<img  src="images/slide_shuffer.png" onclick="SlideMoodule.show(-1)">
 					</div>
 					<div id="next" >
 
-							<img src="images/slide_next.png" alt="" onclick="show(1)">
+							<img src="images/slide_next.png" alt="" onclick="SlideMoodule.show(1)">
 						
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-4 col-xs-4 right">
-					<div class="right_top col-md-4">
-						<div class="col-md-6 col-xs-6 col-sm-6" style="width:170px;padding:0">
+				<div class="col-md-4 col-sm-12 col-xs-12 right">
+					<div class="row">
+						<div class="right_top col-md-4 col-xs-6 col-sm-6">
+						<div class="col-md-6 col-xs-6 col-sm-6 right_top-one">
 							<img src="images/img_1r.png" alt="">
 						</div>
-						<div class="col-md-6 col-xs-6 col-sm-6" style="width:214px;padding-right: 0;">
-							<div class="top col-md-12 col-xs-12 col-sm-12" style="margin-top: 26px;">
+						<div class="col-md-6 col-xs-6 col-sm-6 right_top-content">
+							<div class="top col-md-12 col-xs-12 col-sm-12 top-content">
 								<strong>quà tặng dành cho khách hàng</strong>
 							</div>
-							<div class="text-center col-md-12 col-xs-12 col-sm-12 top">
-								<span style="color: red;">
+							<div class="text-center col-md-12 col-xs-12 col-sm-12 top top-style">
+								<span>
 								<strong>Đặt mua online</strong>
 							</span>
 							</div>
@@ -147,45 +145,46 @@
 								</p>
 								
 							</div>
-							<img src="images/box-shadow.png" alt="" style="margin-top: -12px; margin-right:6px;margin-left: 9px;"width="183">
+							<img src="images/box-shadow.png" alt="">
 						</div>
 					</div>
-				
-				<div class="right_top right_bottom col-md-4 col-xs-4 col-sm-4" style="margin-top: 0">
+					<div class="right_top right_bottom col-md-4 col-xs-6 col-sm-6">
 						<p>SAMSUNG NX1000</p>
-						<small style="padding-left: 7px">100 BỘ DUY NHẤT</small>
-						<div style="color: white;font-size: 8px;margin-top: -2px;margin-left: 10px">
+						<small class="right-bottom-one">100 BỘ DUY NHẤT</small>
+						<div class="right-bottom-two">
 							GALAXY TAB 7.0 .3G WIFI
 						</div>
-						<small>chỉ: <span style="color:#d35d42;font-size:16px">7.990.000</span> VNĐ</small>
-						<div style="margin-top: 12px" id="contrus">
+						<small class="right-bottom-three">chỉ: <span>7.990.000</span> VNĐ</small>
+						<div id="contrus">
 							<p>
-								<strong style="padding-left: 45px">ĐẶT HÀNG TẠI
+								<strong class="contus-one">ĐẶT HÀNG TẠI
 								</strong>
 								<br>
 									<strong>MOBILE SHOPPING.COM</strong>
 								<br>
-								<small style="text-transform: lowercase;padding-left:21px">từ 10/03/2013 - 17/03/2013</small>
+								<small >từ 10/03/2013 - 17/03/2013</small>
 							</p>	
 						</div>
 					</div>
+					</div>				
 				</div>
 			</div>
 		</div>
 		<div id="sileshow">
 			<div class="row">
-				<div class="col-md-4 col-sm-4 col-xs-4 slieshow-1">
-					<div class="bg col-md-12 col-xs-12 col-sm-12">
+				<div class="col-md-4 col-sm-4 col-xs-2 slieshow-1">
+					<div class="row">
+						<div class="bg col-md-12 col-xs-12 col-sm-12">
 						<ul>
 							<li><a href="#">CÔNG TY</a></li>
 							<li><a href="#">HƯỚNG DẪN MUA ONLINE</a></li>
 						</ul>
 					</div>
 					<div class="footer col-md-12 col-xs-12 col-sm-12">
-						<div class="col-md-5 col-xs-5 col-sm-5" style="margin-top: 17px;">
+						<div class="col-md-5 col-xs-5 col-sm-5 footer-one">
 							<img src="images/img1.png" alt="">
 						</div>
-						<div class="col-md-7 col-xs-7 col-sm-7" style="padding: 0">
+						<div class="col-md-7 col-xs-7 col-sm-7 footer-two">
 							<ul>
 								<li onmouseover="Mouse1()" onmouseout="Out1()"><img src="images/icon.png" id ="f1" alt=""><a href="#">Giới thiệu công ty</a></li>	
 								<li onmouseover="Mouse2()" onmouseout="Out2()"><img src="images/icon.png" id ="f2" alt=""><a href="#">Phương châm bán hàng</a></li>
@@ -194,25 +193,29 @@
 							</ul>
 						</div>
 					</div>
+					</div>
+					
 				</div>
 				<div class="col-md-5 col-sm-5 col-xs-5" >
 					<div id="header_bottom" class="col-md-12 col-xs-12 col-sm-12">
-						<p><strong>HÀNG <span style="color: #e61e1e">MỚI VỀ</span></strong></p>
+						<p><strong>HÀNG <span>MỚI VỀ</span></strong></p>
 						<img src="images/new.jpg" alt="">
 					</div>
-					<div class="col-md-12 col-xs-12 col-sm-12" style="padding: 0">
+					<div class="col-md-12 col-xs-12 col-sm-12 header-bottom-one" id="myCarousel" class="carousel slide" data-ride="carousel">
 						<div class="col-md-1 col-xs-1 col-sm-1 img1">
-							<img src="images/shuffer.png" alt="" onclick="show(-1)">
+							<img src="images/shuffer.png" alt="" onclick="SlideModule.show(-1)">
 						</div>
-						<div class="col-md-10 col-xs-10 col-sm-10" style="width: 304px;padding: 0">
-								<div class="col-md-2 col-xs-2 col-sm-2 menushow" style="width:104px;padding: 0">
+						<div class="col-md-10 col-xs-10 col-sm-10">
+							<div class="carousel-inner">
+							<div class="col-md-10 col-xs-10 col-sm-10 item active item2" id="item2" style="" >
+								<div class="col-md-2 col-xs-2 col-sm-2 menushow" style="">
 									<img src="images/img2.jpg" id="menu_imgfooter">
 								</div>
-								<div class="col-md-10 col-xs-10 col-sm-9" style="width:185px;padding: 0">
-									<div class="col-md-2 col-xs-2 col-sm-2" style="padding: 0">
+								<div class="col-md-10 col-xs-10 col-sm-9" id="item2-one">
+									<div class="col-md-2 col-xs-2 col-sm-2 footer-two" >
 										<p id="one">01</p>
 									</div>
-									<div class="col-md-10 col-xs-10 col-sm-10" style="padding: 0">
+									<div class="col-md-10 col-xs-10 col-sm-10 footer-two" >
 										<div class="cham" class="col-md-12 col-xs-12 col-sm-12">
 											<img src="images/cham.png" alt="">
 										<img src="images/cham.png" alt="">
@@ -220,42 +223,49 @@
 										</div>
 										<div class="col-md-12 col-xs-12 col-sm-12 cham">
 											<strong>
-												<span style="color: #cc0000">SONY</span>
-												<span style="color: #959595"> ERRICSION</span>
+												<span class="cham-one">SONY</span>
+												<span  class="cham-two"> ERRICSION</span>
 											</strong>
 											
 										</div>
 										
 									</div>
-									<div class="col-md-12 col-xs-12 col-sm-12" id="contrus2" style="padding: 0">
+									<div class="col-md-12 col-xs-12 col-sm-12" id="contrus2">
 											<strong>Sony Ericsson Idou</strong>
-											<p style="color: #b8b8b8;">
+											<p>
 												Idou (đọc I do)là tên mã của dòng điện thoại chụp ảnh có độ phân giải lớn nhất trên thị trường. ...
 											</p>
 											<button type="button" class="btn btn-xs"> <img src="images/copy.png" alt=""> VIEW</button>
 									</div>
 								</div>
 						</div>
+						<div class="item item2">
+							<img src="images/logo.png" alt="">
+						</div>
+						</div>
+						</div>
+						
+						
 						<div class="col-md-1 col-xs-1 col-sm-1 img1">
-							<img src="images/next.png" alt="" onclick="show(1)">
+							<img src="images/next.png" alt="" onclick="SlideModule.show(1)">
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-xs-3 col-sm-3" style="color: #a9a9a9;margin-top:30px;padding: 0">
-					<div class="col-md-3 col-sm-3 col-xs-3" style="padding-left: 10px">
+				<div class="col-md-3 col-xs-3 col-sm-3 header-show">
+					<div class="col-md-3 col-sm-3 col-xs-3 footer-two">
 						<img src="images/img3.jpg" alt="">
 					</div>
-					<div class="col-md-9 col-sm-9 col-xs-9" style="font-size: 12px;font-family: Arial">
+					<div class="col-md-9 col-sm-9 col-xs-9 header-show-two">
 						<p>TOP THƯƠNG HIỆU VÀNG</p>
 						<p>BẠN ĐỌC BÌNH CHỌN 5 NĂM</p>
 					</div>
-					<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0">
+					<div class="col-md-12 col-sm-12 col-xs-12 footer-two">
 						<img src="images/new.jpg" alt="">
 					</div>
-					<div class="col-md-3 col-sm-3 col-xs-3" style="padding: 0">
+					<div class="col-md-3 col-sm-3 col-xs-3 footer-two">
 						<img src="images/img4.jpg" alt="">
 					</div>
-					<div class="col-md-9 col-xs-9 col-sm-9" style="font-size: 12px;font-family: Arial">
+					<div class="col-md-9 col-xs-9 col-sm-9 .header-show-two" >
 						<p>THƯƠNG HIỆU VIỆT</p>
 						<p>ĐƯỢC YÊU THÍCH NHẤT</p>
 					</div>

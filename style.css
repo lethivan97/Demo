@@ -7,6 +7,9 @@
 /* [class*=col-md]{
 	padding: 0;
 } */
+body{
+	background-color:#B5B0B0;
+}
 #page{
 	width: 1000px;
 	height: 800px;
@@ -18,14 +21,13 @@
 	width: 1000px !important;
 } */
 .row{
-	width: 1000px;
 	margin-left: 0;
 	margin-right: 0;
 }
 #header{
 	background-color: white;
 	width: 100%;
-	height: 174px;
+	height: 122px;
 }
 #logo{
 	margin: 25px 50px 19px 33px;
@@ -80,7 +82,6 @@
 	width: 100%;
 	background: url('images/bg_menu.jpg') repeat-x;
 	margin: 0;
-	
 }
 
 #menu ul li{
@@ -107,6 +108,7 @@
 }
 #form{
 	    vertical-align: -5px;
+	    position: relative;
 }
 #form input{
 	width: 150px;
@@ -116,8 +118,8 @@
 }
 #form img{
 	position: absolute;
-	top: 138px;
-	right: 18px;
+	top: 0;
+	right: 0;
 }
 #menu ul .menu_hover{
 	background: url('images/bghover.png') repeat-x;
@@ -138,7 +140,17 @@
 .menu_hover img{
 	margin-right: 0;
 }
-
+.second{
+	margin-left: -5px";
+}
+.right_top-one{
+	width:170px;
+	padding:0;
+}
+.right_top-content{
+	width:214px;
+	padding-right: 0;
+}
 #body{
 	height: 360px;
 }
@@ -176,6 +188,18 @@
 	color: #727272;
 	padding: 0;
 }
+.top-content{
+	margin-top: 26px;
+}
+.top-style span{
+	color: red;
+}
+.right_top-content > img{
+	margin-top: -12px; 
+	margin-right:6px;
+	margin-left: 9px;
+	width: 183px;
+}
 #right_bottom{
 	height: 52px;
 	width: 177px;
@@ -196,6 +220,7 @@
 	background-size: 100% 100%;
 	box-shadow: 3px 3px #cccccc ;
 	border-top: 2px solid #cccccc ;
+	margin-top: 0
 }
 .right_bottom >p{
 	padding: 0 4px 0;
@@ -205,9 +230,32 @@
 	font-family: VNI-Helve;
 	text-transform: uppercase;
 }
+.right-bottom-one{
+	padding-left: 7px;
+}
+.right-bottom-two{
+	color: white;
+	font-size: 8px;
+	margin-top: -2px;
+	margin-left: 10px;
+}
+.right-bottom-three span{
+	color:#d35d42;
+	font-size:16px;
+}
+#contrus{
+	margin-top: 12px;
+}
+#contrus .contus-one{
+ 	padding-left: 45px;
+ }
 #contrus p{
 	font-size: 10px;
     font-family: Arial;
+}
+#contrus p small{
+	text-transform: lowercase;
+	padding-left:21px;
 }
 #contrus2 strong,#contrus2 p{
 	font-family: Arial;
@@ -239,7 +287,12 @@
 	height: 158px;
 	padding: 0;
 }
-
+.footer-one{
+	margin-top: 17px;
+}
+.footer-two,.header-bottom-one,#contrus2,.slieshow-1{
+	padding: 0;
+}
 .footer ul{
 	list-style: none;
 	margin-top: 35px;
@@ -260,9 +313,7 @@
 	font-family: Arial;
 	font-size: 14px;
 }
-.footer ul li img{
 
-}
 #header_bottom{
 	font-family: Gulin;
 	font-size: 16px;
@@ -274,6 +325,9 @@
     margin-top: 7px;
     margin-left: 25px;
     font-family: Gulim;
+}
+#header_bottom p span{
+	color: #e61e1e;
 }
 #header_bottom img{
 	margin-top: -25px;
@@ -309,6 +363,9 @@
 #menu_footer  #last{
 	border-right: none;
 }
+#contrus2 p{
+	color: #b8b8b8;
+}
 #info{
 	font-family: Verdana;
 	font-size: 12px;
@@ -320,6 +377,10 @@
 }
 #info p{
 	padding-top: 6px;
+}
+.menushow{
+	width:104px;
+	padding: 0;
 }
 .menushow img{
 margin: 37px 0;
@@ -355,6 +416,103 @@ margin: 37px 0;
 	font-family: Arial;
 	font-size: 15px;
 }
-.slieshow-1{
+.header-show{
+	color: #a9a9a9;
+	margin-top:30px;
 	padding: 0;
+}
+.header-show-one{
+	padding-left: 10px;
+}
+.header-show-two{
+	font-size: 12px;
+	font-family: Arial;
+}
+.cham-one{
+	color: #cc0000;
+	}
+.cham-two{
+		color: #959595;
+	}
+.navbar .icon {
+  display: none;
+  line-height: 52px;
+}
+#item2{
+	width: 304px;
+	padding: 0;
+}
+#item2-one{
+	width:185px;
+	padding: 0;
+}
+@media only screen and (max-width: 768px){
+	#menu li:not(:first-child), #menu li:not(:first-child) > img{
+		display: none;
+	}
+  	.navbar .icon {
+    float: right;
+    display: block;
+    padding-right: 10px;
+  	}
+	#page{
+		height: auto;
+	}
+	#body .left{
+		width: 100%;
+	}
+	#body .left img{
+		width: 100%;
+		height: 100%;
+	}
+	#anh{
+		height: 300px;
+		background-color: #D3CECE;
+	}
+	#slideshow{
+		display: none;
+	}
+	#shuffer,#next{
+		display: none;
+	}
+	#body .right{
+		width: 100%;
+	}
+	.right_top{
+		margin-top: 0;
+		width: 49%;
+	}
+	#body .left #anh img{
+		width: 50%;
+		height: 300px;
+		margin: 0 auto;
+		
+	}
+		
+	.navbar.responsive {position: relative;}
+  	.navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  	}
+  	.navbar.responsive ul li {
+    float: none;
+    display: block !important;
+    text-align: left;
+    z-index: 100;
+    background-color: gray;
+  }
+  .navbar.responsive ul #form{
+  	height: 52px;
+  }
+  .navbar.responsive ul #form input{
+  	height: 52px;
+  	width: 100% !important;
+  	height: 100%;
+  	margin: 10px 0;
+  }
+  .navbar.responsive ul #form img{
+  	top: 10px ;
+  	height: 30px;
+  }
 }

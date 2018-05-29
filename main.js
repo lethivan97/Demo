@@ -1,9 +1,9 @@
-var SlideMoodule=(function(){
+var SlideModule=(function(){
 	var slideIndex = 1;
 
-	var showDivs=function showDivs(n) {
+	var showDivs=function showDivs(n,name) {
 		  var i;
-		  var x = document.getElementsByClassName("item1");
+		  var x = document.getElementsByClassName(name);
 		  if (n > x.length) {slideIndex = 1}    
 		  if (n < 1) {slideIndex = x.length}
 		  for (i = 0; i < x.length; i++) {
@@ -12,12 +12,12 @@ var SlideMoodule=(function(){
 		  x[slideIndex-1].className += " active"; 
 		}
 	return {
-		show:function show(n) {
-  		showDivs(slideIndex+=n);
+		show:function show(n,name) {
+  		showDivs(slideIndex+=n,name);
 	}		
 	}
 })();
-var SlideModule=(function(){
+/*var SlideModule=(function(){
 	var slideIndex = 1;
 
 	var showDivs=function showDivs(n) {
@@ -35,7 +35,7 @@ var SlideModule=(function(){
   		showDivs(slideIndex+=n);
 	}		
 	}
-})();
+})();*/
 /*var slideIndex = 1;
 showDivs(slideIndex);
 function show(n) {
